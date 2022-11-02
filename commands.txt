@@ -1,0 +1,24 @@
+# Build and run application image only
+
+docker build --tag points-transfer .
+docker run --publish 8000:8000 points-transfer
+
+
+# Build and run applicantion, database and other services
+-- First step --
+
+docker-compose build
+docker-compose up
+
+# To acess interactive terminal and migrate changes to the database
+-- Second step --
+
+docker exec -it points-transfer /bin/bash
+python manage.py migrate
+
+-- Third step --
+docker-compose build
+docker-compose up
+
+obs: To see all files in the folder just type "ls"
+

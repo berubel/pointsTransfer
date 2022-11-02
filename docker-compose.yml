@@ -1,0 +1,33 @@
+version: '3.9'
+services:
+  points-transfer:
+    build: .
+    volumes:
+    - .:/points-transfer
+    ports: 
+    - 8000:8000
+    image: points-transfer:api
+    container_name: points-transfer
+    # command: python manage.py runserver 0.0.0.0:8000
+    depends_on:
+      - db
+    links:
+      - db:db
+    networks:
+      - djangonetwork
+  db:
+    image: postgres
+    restart: always
+    volumes:
+    - ./data/db:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    container_name: postgres-db
+    networks:
+      - djangonetwork
+
+networks:
+    djangonetwork:
+      driver: bridge
