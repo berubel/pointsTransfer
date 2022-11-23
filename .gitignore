@@ -135,7 +135,6 @@ celerybeat.pid
 data/db
 
 # Environments
-.env
 .venv
 env/
 venv/

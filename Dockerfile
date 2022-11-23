@@ -4,6 +4,8 @@ ENV PYTHONUNBUFFERED=1
 WORKDIR /pointsTransfers
 
 COPY requirements.txt requirements.txt
+
+RUN pip install --upgrade pip
 RUN pip install --upgrade setuptools
 RUN pip install -r requirements.txt
 
