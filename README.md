@@ -18,8 +18,28 @@
           **CSRF_TRUSTED_ORIGINS**=< Trusted request origins full URL or IP>
 
           **DEBUG**=True (remove this one for production mode)
+
+- Run initial management commands
+
+  - On `\pointsTransfer\pointsTransfer`
+    - Create the database Migrations
+      - `python .\manage.py makemigrations` 
+    - Run the Migrations
+      - `python .\manage.py migrate`
+    
+- Create a Super User for testing
+  - On `\pointsTransfer\pointsTransfer`
+    - ` python .\manage.py createsuperuser` 
+
+- Run the project
+  - On `\pointsTransfer\pointsTransfer`
+    - ` python .\manage.py runserver`
+    
+- Access the admin panel
+  - Go to http://localhost:8000
+    - Port may differ if you change it on "runserver" command.
   
-### Build and run application image only
+### Docker File: Build and run application image only
 
 - First step
 
@@ -34,10 +54,6 @@
 
   - Open interactive terminal on
     - `docker exec -it points-transfer /bin/bash`
-    - Install dotenv on the repo
-    - `dotenv-stripout install`
-      - To check if it's installed
-        - `dotenv-stripout status`
     - Create the database Migrations
       - `python .\manage.py makemigrations` 
     - Run the Migrations
@@ -49,7 +65,7 @@
   - Go to 127.0.0.1:8000
     - Port may differ if you change it on "runserver" command.
 
-### Build and run application, database and other services
+### Docker Compose: Build and run application, database and other services
 
 - First step
 
@@ -64,10 +80,7 @@
 
   - Open interactive terminal on
     - `docker exec -it points-transfer /bin/bash`
-  - Install dotenv on the repo
-    - `dotenv-stripout install`
-      - To check if it's installed
-        - `dotenv-stripout status`
+ 
   - Create the database Migrations
     - `python .\manage.py makemigrations` 
   - Run the Migrations
@@ -83,7 +96,7 @@
     - `python .\manage.py createsuperuser` 
   
 - Access the admin panel
-  - Go to 0.0.0.0:8000
+  - Go to 127.0.0.1:8000
     - Port may differ if you change it on "runserver" command.
 
 Obs: If any changes are made to the application code, database or other services, build and run the images again.
