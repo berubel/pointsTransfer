@@ -21,6 +21,6 @@ class UserSerializer(serializers.ModelSerializer):
         extra_kwargs = {'password': {'write_only': True}}
 
 class TransferDataSerializer(serializers.Serializer):
-    transfer_user =  serializers.IntegerField(max_length=7)
+    transfer_user =  serializers.CharField(max_length=7)
     transfer_value = serializers.CharField()
 

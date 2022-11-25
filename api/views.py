@@ -1,6 +1,3 @@
-import jwt
-
-from pointsTransfer.settings import SECRET_KEY
 from .models import Receipt, User
 from .serializers import ReceiptSerializer, TransferDataSerializer, UserSerializer
 
@@ -38,7 +35,7 @@ def api_overview(request):
 # Endpoint to send data to perform transfer and create a receipt
 class TransferAPIView(APIView):
     permission_classes = (IsAuthenticated,)
-    def post(self, request, format=None):
+    def post(self, request):
         try:
             user = request.user
             serializer = TransferDataSerializer(data=request.data)
@@ -82,59 +79,49 @@ class TransferAPIView(APIView):
 
 # ------------------ INCOMING RECEIPTS -------------------------
 
-# Endpoint to list all incoming receipts for a user
-@api_view(['GET'])
-def incoming_transfer_receipts(request):
+class IncomingTransferReceipts(APIView):
     permission_classes = (IsAuthenticated, )
-    try:
+    def get(self, request, pk=None):
         user = request.user
-        receipt = Receipt.objects.filter(transfer_user=user.enrollment)
-        serializer = ReceiptSerializer(receipt, many=True)
+        if not pk: # Endpoint to list all incoming receipts for a user
+            try:
+                receipt = Receipt.objects.filter(transfer_user=user.enrollment)
+            except: 
+                return Response({'message': 'Não encontrado.'}, status=HTTP_404_NOT_FOUND)
 
-        return Response(serializer.data, status=HTTP_200_OK)
-    except: 
-        return Response({'message': 'Não encontrado.'}, status=HTTP_404_NOT_FOUND)
+            serializer = ReceiptSerializer(receipt, many=True)
+            return Response(serializer.data, status=HTTP_200_OK)
+        else: # Endpoint to list a specific incoming receipt for a user  
+            try:
+                receipt = Receipt.objects.get(transfer_user=user.enrollment, pk=pk)
+            except:
+                return Response({ 'message': 'Não encontrado.'}, status=HTTP_404_NOT_FOUND)
 
-# Endpoint to list a specefic incoming receipt for a user  
-@api_view(['GET'])
-def incoming_transfer_receipt_detail(request, pk):
-    permission_classes = (IsAuthenticated, )
-    try:
-        user =  request.user
-        receipt = Receipt.objects.get(transfer_user=user.enrollment, pk=pk)
-        serializer = ReceiptSerializer(receipt, many=False)
-
-        return Response(serializer.data, status=HTTP_200_OK)
-    except:
-        return Response({ 'message': 'Não encontrado.'}, status=HTTP_404_NOT_FOUND)
+            serializer = ReceiptSerializer(receipt, many=False)
+            return Response(serializer.data, status=HTTP_200_OK)   
        
 # ------------------ MADE RECEIPTS -------------------------
 
-# Endpoint to list all made receipts for a user
-@api_view(['GET'])
-def made_transfer_receipts(request):
+class MadeTransferReceipts(APIView):
     permission_classes = (IsAuthenticated, )
-    try:
+    def get(self, request, pk=None):
         user = request.user
-        receipt = Receipt.objects.filter(user=user.enrollment)
-        serializer = ReceiptSerializer(receipt, many=True)
+        if not pk: # Endpoint to list all made receipts for a user
+            try:
+                receipt = Receipt.objects.filter(user=user.enrollment)
+            except:
+                return Response({'message': 'Não encontrado.'}, status=HTTP_404_NOT_FOUND)
 
-        return Response(serializer.data, status=HTTP_200_OK)
-    except:
-        return Response({'message': 'Não encontrado.'}, status=HTTP_404_NOT_FOUND)
-    
-# Endpoint to list a specefic made receipt for a user
-@api_view(['GET'])
-def made_transfer_receipt_detail(request, pk):
-    permission_classes = (IsAuthenticated, )
-    try:
-        user = request.user
-        receipt = Receipt.objects.get(user=user.enrollment, pk=pk)  
-        serializer = ReceiptSerializer(receipt, many=False)
+            serializer = ReceiptSerializer(receipt, many=True)
+            return Response(serializer.data, status=HTTP_200_OK)
+        else: # Endpoint to list a specific made receipt for a user
+            try:
+                receipt = Receipt.objects.get(user=user.enrollment, pk=pk)  
+            except:
+                return Response({ 'message': 'Não encontrado.'}, status=HTTP_404_NOT_FOUND)
 
-        return Response(serializer.data, status=HTTP_200_OK)
-    except:
-        return Response({ 'message': 'Não encontrado.'}, status=HTTP_404_NOT_FOUND)
+            serializer = ReceiptSerializer(receipt, many=False)
+            return Response(serializer.data, status=HTTP_200_OK)
  
 # ----------------- USER ------------------------
 class UserApiView(APIView):

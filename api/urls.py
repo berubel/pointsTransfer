@@ -11,8 +11,8 @@ urlpatterns = [
     path('refresh-token/', TokenRefreshView.as_view(), name='token_refresh'),
     path('user/', views.UserApiView.as_view()),
     path('transfer/', views.TransferAPIView.as_view()),   
-    path('made-transfer-receipts/', views.made_transfer_receipts),
-    path('made-transfer-receipt-detail/<int:pk>/', views.made_transfer_receipt_detail),
-    path('incoming-transfer-receipts/', views.incoming_transfer_receipts),
-    path('incoming-transfer-receipt-detail/<int:pk>/', views.incoming_transfer_receipt_detail)
+    path('made-transfer-receipts/', views.MadeTransferReceipts.as_view(), name="made_transfers_list"),
+    path('made-transfer-receipts/<int:pk>/', views.MadeTransferReceipts.as_view(), name="made_transfer_detail"),
+    path('incoming-transfer-receipts/', views.IncomingTransferReceipts.as_view(), name="incoming_transfers_list"),
+    path('incoming-transfer-receipts/<int:pk>/', views.IncomingTransferReceipts.as_view(), name="incoming_transfer_detail"),
 ]
