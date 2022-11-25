@@ -1,0 +1,14 @@
+_id: env_e0b79deb4bd18ac6970833de4261c77d0362d36a
+type: Environment
+parentId: wrk_fef55bea691c4548bbe53ea27d36a85c
+modified: 1669405629950
+created: 1669405383242
+name: Base Environment
+data:
+  server: http://127.0.0.1:8000
+dataPropertyOrder:
+  "&":
+    - server
+color: null
+isPrivate: false
+metaSortKey: 1669405383242

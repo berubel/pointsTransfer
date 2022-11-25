@@ -1,0 +1,23 @@
+_id: req_a4b0bee3924f4a62bb4ba2ec1a8f33fa
+type: Request
+parentId: fld_83859fb166d64cc39cde138ba043329c
+modified: 1669405575130
+created: 1669405575130
+url: "{{ _.server }}/api/incoming-transfer-receipts/"
+name: Incoming transfer receipt detail
+description: ""
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: bearer
+  token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjY5NDA3MzY3LCJpYXQiOjE2Njk0MDM3NjcsImp0aSI6IjdlZjY3ZTJjMWRjNDRlYzRiZWVhNTZkNzhiMDhjM2YzIiwidXNlcl9pZCI6Mn0.syeZDekPOuNQJuq0o7EUKgr3wYQ1WvD5eq6fzZEYDjY
+metaSortKey: -1666206349377
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

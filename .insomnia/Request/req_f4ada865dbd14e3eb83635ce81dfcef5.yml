@@ -1,0 +1,27 @@
+_id: req_f4ada865dbd14e3eb83635ce81dfcef5
+type: Request
+parentId: fld_f07deea0d116404ea76701f13bc14411
+modified: 1669405731659
+created: 1669405575118
+url: "{{ _.server }}/api/made-transfer-receipt-detail/2/"
+name: Made Transfer Receipt Detail
+description: ""
+method: GET
+body: {}
+parameters: []
+headers:
+  - id: pair_9a271bc0222d412ab011a697f1b69520
+    name: ""
+    value: ""
+    description: ""
+authentication:
+  type: bearer
+  token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjY5NDA3MzY3LCJpYXQiOjE2Njk0MDM3NjcsImp0aSI6IjdlZjY3ZTJjMWRjNDRlYzRiZWVhNTZkNzhiMDhjM2YzIiwidXNlcl9pZCI6Mn0.syeZDekPOuNQJuq0o7EUKgr3wYQ1WvD5eq6fzZEYDjY
+metaSortKey: -1666206314642
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
