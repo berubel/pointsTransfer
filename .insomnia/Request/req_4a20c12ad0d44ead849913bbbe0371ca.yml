@@ -1,0 +1,34 @@
+_id: req_4a20c12ad0d44ead849913bbbe0371ca
+type: Request
+parentId: fld_f07deea0d116404ea76701f13bc14411
+modified: 1669412229327
+created: 1669405575112
+url: "{{ _.server }}/api/made-transfer-receipts/"
+name: Made Transfer Receipt List
+description: ""
+method: GET
+body:
+  mimeType: application/json
+  text: ""
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_7bbeb2509a3e4924a30acf92cd7abffb
+  - id: pair_d0f32eb2a55246b48d0fdd4a7eff35ba
+    name: Authentication
+    value: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjY2NDk4NjAxLCJpYXQiOjE2NjY0OTgzMDEsImp0aSI6Ijg4OTNkMjUzNWYwYzQ0MWE4YjI2YWJiMjY0MWM1ZWE5IiwidXNlcl9pZCI6MX0.8SSps8IZqjZaAH42KvQd6rLi59_aBFZrekO7h0j2e2Q
+    description: ""
+    disabled: true
+authentication:
+  type: bearer
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjY5NDE1NTcxLCJpYXQiOjE2Njk0MTE5NzEsImp0aSI6IjVkMzQ0NzJiNjcwYzQzYjE5ZDhkZTBiNzFjZDMyYTMyIiwidXNlcl9pZCI6Mn0.HZjXm3scZ-ZbLpY9qBbyk33fRvXVKLOxqtQT3laxC9A
+  disabled: false
+metaSortKey: -1666206314617
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,0 +1,38 @@
+_id: req_2655588955994f0d9df3128a5e0413de
+type: Request
+parentId: fld_bf6ad7f70b7448078c3088401cb8243a
+modified: 1669411967401
+created: 1669405575093
+url: "{{ _.server }}/api/user/"
+name: User
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"username":"segantini",
+    	"password":"123456",
+    	"enrollment":"7654321",
+    	"name":"Gustavo Segantini", 
+    	"course":"Engenharia de Software", 
+    	"balance":0
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_4cc858f32f62404f812be93cb353f6bb
+  - id: pair_c37d9abab4f149eaa724123fc24c1a8c
+    name: Authorization
+    value: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjY2NDE1MTcyLCJpYXQiOjE2NjY0MTE1NzIsImp0aSI6ImVkZjQ5OWNjYTExZDQ1MmY4NmExYzM5M2MwN2M3OTZiIiwidXNlcl9pZCI6MX0.H5XgIS7YlZX8TTBoqaB5qgxJf_3ejkelIAMnIVKM_p0
+    description: ""
+authentication: {}
+metaSortKey: -1666206066839
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
