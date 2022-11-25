@@ -1,7 +1,7 @@
 _id: req_4a20c12ad0d44ead849913bbbe0371ca
 type: Request
 parentId: fld_f07deea0d116404ea76701f13bc14411
-modified: 1669405737300
+modified: 1669412229327
 created: 1669405575112
 url: "{{ _.server }}/api/made-transfer-receipts/"
 name: Made Transfer Receipt List
@@ -22,7 +22,7 @@ headers:
     disabled: true
 authentication:
   type: bearer
-  token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjY5NDA5MzE2LCJpYXQiOjE2Njk0MDU3MTYsImp0aSI6ImRiNGM0NjBkYWY5MDQxNTZhODQ4NGE5YjU3MmVhMmM2IiwidXNlcl9pZCI6Mn0.PfPXtZ2pwjlaKHUSt6oNhKh4-Vl0SCEQfPDlYPIiAHE
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjY5NDE1NTcxLCJpYXQiOjE2Njk0MTE5NzEsImp0aSI6IjVkMzQ0NzJiNjcwYzQzYjE5ZDhkZTBiNzFjZDMyYTMyIiwidXNlcl9pZCI6Mn0.HZjXm3scZ-ZbLpY9qBbyk33fRvXVKLOxqtQT3laxC9A
   disabled: false
 metaSortKey: -1666206314617
 isPrivate: false

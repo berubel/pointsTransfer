@@ -1,7 +1,7 @@
 _id: req_a4b0bee3924f4a62bb4ba2ec1a8f33fa
 type: Request
 parentId: fld_83859fb166d64cc39cde138ba043329c
-modified: 1669405575130
+modified: 1669412267667
 created: 1669405575130
 url: "{{ _.server }}/api/incoming-transfer-receipts/"
 name: Incoming transfer receipt detail
@@ -12,7 +12,7 @@ parameters: []
 headers: []
 authentication:
   type: bearer
-  token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjY5NDA3MzY3LCJpYXQiOjE2Njk0MDM3NjcsImp0aSI6IjdlZjY3ZTJjMWRjNDRlYzRiZWVhNTZkNzhiMDhjM2YzIiwidXNlcl9pZCI6Mn0.syeZDekPOuNQJuq0o7EUKgr3wYQ1WvD5eq6fzZEYDjY
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjY5NDE1ODEyLCJpYXQiOjE2Njk0MTIyMTIsImp0aSI6IjM1ZmIwYmFjZWIzYzQ1YTliOWUzZWMzMTFkNGU5MWViIiwidXNlcl9pZCI6Mn0.i0mxOuvRcot37zAft_Yni6jYNxixEWm1c-q-p6OpEhU
 metaSortKey: -1666206349377
 isPrivate: false
 settingStoreCookies: true

@@ -1,9 +1,9 @@
 _id: req_f4ada865dbd14e3eb83635ce81dfcef5
 type: Request
 parentId: fld_f07deea0d116404ea76701f13bc14411
-modified: 1669405731659
+modified: 1669412238070
 created: 1669405575118
-url: "{{ _.server }}/api/made-transfer-receipt-detail/2/"
+url: "{{ _.server }}/api/made-transfer-receipts/2/"
 name: Made Transfer Receipt Detail
 description: ""
 method: GET
@@ -16,7 +16,7 @@ headers:
     description: ""
 authentication:
   type: bearer
-  token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjY5NDA3MzY3LCJpYXQiOjE2Njk0MDM3NjcsImp0aSI6IjdlZjY3ZTJjMWRjNDRlYzRiZWVhNTZkNzhiMDhjM2YzIiwidXNlcl9pZCI6Mn0.syeZDekPOuNQJuq0o7EUKgr3wYQ1WvD5eq6fzZEYDjY
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjY5NDE1ODEyLCJpYXQiOjE2Njk0MTIyMTIsImp0aSI6IjM1ZmIwYmFjZWIzYzQ1YTliOWUzZWMzMTFkNGU5MWViIiwidXNlcl9pZCI6Mn0.i0mxOuvRcot37zAft_Yni6jYNxixEWm1c-q-p6OpEhU
 metaSortKey: -1666206314642
 isPrivate: false
 settingStoreCookies: true

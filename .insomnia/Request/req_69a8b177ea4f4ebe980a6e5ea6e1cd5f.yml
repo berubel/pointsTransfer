@@ -1,7 +1,7 @@
 _id: req_69a8b177ea4f4ebe980a6e5ea6e1cd5f
 type: Request
 parentId: fld_ced8a5adbc9a484a91e3954fff9f5686
-modified: 1669405762568
+modified: 1669412249028
 created: 1669405575136
 url: "{{ _.server }}/api/transfer/"
 name: Transfer
@@ -12,7 +12,7 @@ body:
   text: |-
     {
     	"transfer_user": "2010840",
-    	"transfer_value": 10
+    	"transfer_value": 5
     }
 parameters: []
 headers:
@@ -21,7 +21,7 @@ headers:
     id: pair_bb1ab0942a954617bd0989249ce1a2e2
 authentication:
   type: bearer
-  token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjY5NDA5MzE2LCJpYXQiOjE2Njk0MDU3MTYsImp0aSI6ImRiNGM0NjBkYWY5MDQxNTZhODQ4NGE5YjU3MmVhMmM2IiwidXNlcl9pZCI6Mn0.PfPXtZ2pwjlaKHUSt6oNhKh4-Vl0SCEQfPDlYPIiAHE
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjY5NDE1ODEyLCJpYXQiOjE2Njk0MTIyMTIsImp0aSI6IjM1ZmIwYmFjZWIzYzQ1YTliOWUzZWMzMTFkNGU5MWViIiwidXNlcl9pZCI6Mn0.i0mxOuvRcot37zAft_Yni6jYNxixEWm1c-q-p6OpEhU
   disabled: false
 metaSortKey: -1665427596336.3445
 isPrivate: false
